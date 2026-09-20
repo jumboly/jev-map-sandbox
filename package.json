@@ -1,0 +1,22 @@
+{
+  "name": "jev-map-sandbox",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "TypeSafe AI の System One モデル Jev を使った実験リポジトリ",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "catalog:gsi": "node scripts/build-layer-catalog.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "maplibre-gl": "^5.0.0"
+  }
+}

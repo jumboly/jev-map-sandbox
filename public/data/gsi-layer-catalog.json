@@ -1,0 +1,476 @@
+{
+  "generatedAt": "2026-09-20T03:36:24.447Z",
+  "styleUrl": "https://gsi-cyberjapan.github.io/optimal_bvmap/style/std.json",
+  "styleName": "optbv",
+  "totalLayers": 123,
+  "groups": [
+    {
+      "id": "background",
+      "label": "背景",
+      "description": "地図全体の下地の塗り。これを消すと地図が成立しない。",
+      "alwaysVisible": true,
+      "layerIds": [
+        "background"
+      ],
+      "layerTypes": [
+        "background"
+      ],
+      "sourceLayers": []
+    },
+    {
+      "id": "railway-tunnel",
+      "label": "鉄道（地下・トンネル区間）",
+      "description": "鉄道路線のうち地下鉄やトンネル内を通る区間の中心線。地上の線路とは別に描かれる。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "鉄道中心線地下トンネルククリ",
+        "鉄道中心線地下トンネル"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RailCL"
+      ]
+    },
+    {
+      "id": "railway",
+      "label": "鉄道（線路・駅）",
+      "description": "JR・私鉄など鉄道路線の中心線と、駅部分のククリ（駅を示す白抜き表現）、橋梁区間の線路。「電車」「路線」「駅」「線路」に相当する地図要素。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "鉄道中心線ZL4-10",
+        "鉄道中心線駅ククリ0",
+        "鉄道中心線0",
+        "鉄道中心線旗竿0",
+        "鉄道中心線橋ククリ黒0",
+        "鉄道中心線橋ククリ白0",
+        "鉄道中心線橋駅ククリ0",
+        "鉄道中心線橋0",
+        "鉄道中心線旗竿橋0",
+        "鉄道中心線駅ククリ1",
+        "鉄道中心線1",
+        "鉄道中心線旗竿1",
+        "鉄道中心線橋ククリ黒1",
+        "鉄道中心線橋ククリ白1",
+        "鉄道中心線橋駅ククリ1",
+        "鉄道中心線橋1",
+        "鉄道中心線旗竿橋1",
+        "鉄道中心線駅ククリ2",
+        "鉄道中心線2",
+        "鉄道中心線旗竿2",
+        "鉄道中心線橋ククリ黒2",
+        "鉄道中心線橋ククリ白2",
+        "鉄道中心線橋駅ククリ2",
+        "鉄道中心線橋2",
+        "鉄道中心線旗竿橋2",
+        "鉄道中心線駅ククリ3",
+        "鉄道中心線3",
+        "鉄道中心線旗竿3",
+        "鉄道中心線橋ククリ黒3",
+        "鉄道中心線橋ククリ白3",
+        "鉄道中心線橋駅ククリ3",
+        "鉄道中心線橋3",
+        "鉄道中心線旗竿橋3",
+        "鉄道中心線駅ククリ4",
+        "鉄道中心線4",
+        "鉄道中心線旗竿4",
+        "鉄道中心線橋ククリ黒4",
+        "鉄道中心線橋ククリ白4",
+        "鉄道中心線橋駅ククリ4",
+        "鉄道中心線橋4",
+        "鉄道中心線旗竿橋4"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RailCL"
+      ]
+    },
+    {
+      "id": "tramway",
+      "label": "軌道（路面電車）",
+      "description": "路面電車・軌道の中心線。道路上を走る鉄道であり、鉄道とは別レイヤー。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "軌道の中心線トンネル",
+        "軌道の中心線"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RailTrCL"
+      ]
+    },
+    {
+      "id": "road-major",
+      "label": "主要道路（高速道路・国道）",
+      "description": "広域ズームでも表示される高速道路と国道の中心線。都市間の移動や幹線のつながりを表す。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "道路中心線ZL4-10国道",
+        "道路中心線ZL4-10高速"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RdCL"
+      ]
+    },
+    {
+      "id": "road-path",
+      "label": "徒歩道・階段",
+      "description": "車が通れない細い道や階段。歩行者向けの経路を表す。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "道路中心線破線",
+        "道路中心線階段"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RdCL"
+      ]
+    },
+    {
+      "id": "road",
+      "label": "一般道路",
+      "description": "市街地を含む一般的な道路の中心線と橋梁区間。地図の骨格になる最も密度の高い線群。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "道路中心線ククリ0",
+        "道路中心線色0",
+        "道路中心線ククリ橋0",
+        "道路中心線色橋0",
+        "道路中心線ククリ1",
+        "道路中心線色1",
+        "道路中心線ククリ橋1",
+        "道路中心線色橋1",
+        "道路中心線ククリ2",
+        "道路中心線色2",
+        "道路中心線ククリ橋2",
+        "道路中心線色橋2",
+        "道路中心線ククリ3",
+        "道路中心線色3",
+        "道路中心線ククリ橋3",
+        "道路中心線色橋3",
+        "道路中心線ククリ4",
+        "道路中心線色4",
+        "道路中心線ククリ橋4",
+        "道路中心線色橋4"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RdCL"
+      ]
+    },
+    {
+      "id": "road-edge",
+      "label": "道路縁",
+      "description": "道路の両端を示す細線。大縮尺で道路の幅を表現する。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "道路縁"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RdEdg"
+      ]
+    },
+    {
+      "id": "road-structure",
+      "label": "道路構成線（トンネル・分離帯）",
+      "description": "道路のトンネル区間や中央分離帯を示す線。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "道路構成線トンネル内の道路",
+        "道路構成線分離帯"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RdCompt"
+      ]
+    },
+    {
+      "id": "building",
+      "label": "建築物",
+      "description": "建物の輪郭ポリゴンと外周線。市街地の密度や街区の形を表し、都市部では面積の大半を占める。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "建築物0",
+        "建築物の外周線0",
+        "建築物1",
+        "建築物の外周線1",
+        "建築物2",
+        "建築物の外周線2",
+        "建築物3",
+        "建築物の外周線3",
+        "建築物4",
+        "建築物の外周線4"
+      ],
+      "layerTypes": [
+        "fill",
+        "line"
+      ],
+      "sourceLayers": [
+        "BldA"
+      ]
+    },
+    {
+      "id": "water-area",
+      "label": "水域（海・湖沼・河川面）",
+      "description": "海、湖、池、幅のある河川の水面を示す塗り。海岸線の内外を決める基準になる。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "水域"
+      ],
+      "layerTypes": [
+        "fill"
+      ],
+      "sourceLayers": [
+        "WA"
+      ]
+    },
+    {
+      "id": "coastline",
+      "label": "海岸線",
+      "description": "海と陸の境界線。日本の地図で最も認識しやすい輪郭。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "海岸線",
+        "海岸線堤防等に接する部分破線"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "Cstline"
+      ]
+    },
+    {
+      "id": "waterline",
+      "label": "水涯線",
+      "description": "湖沼や河川の水際を示す線。海岸線以外の水と陸の境界。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "水涯線",
+        "水涯線堤防等に接する部分破線"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "WL"
+      ]
+    },
+    {
+      "id": "river",
+      "label": "河川・水路",
+      "description": "河川と人工水路の中心線（地下水路・枯れ川を含む）。幅の狭い川は面ではなく線で描かれる。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "河川中心線人工水路地下",
+        "河川中心線枯れ川部",
+        "河川中心線"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "RvrCL"
+      ]
+    },
+    {
+      "id": "water-label-line",
+      "label": "水部表記線",
+      "description": "滝、せき、水流方向など水部に付随する補助的な記号・線。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "水部表記線polygon",
+        "水部表記線line",
+        "水部表記線point"
+      ],
+      "layerTypes": [
+        "fill",
+        "line",
+        "symbol"
+      ],
+      "sourceLayers": [
+        "WRltLine"
+      ]
+    },
+    {
+      "id": "water-structure",
+      "label": "水部構造物（堤防・水門など）",
+      "description": "堤防、水門、ダムなど水に関わる人工構造物。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "水部構造物面",
+        "水部構造物線"
+      ],
+      "layerTypes": [
+        "fill",
+        "line"
+      ],
+      "sourceLayers": [
+        "WStrA",
+        "WStrL"
+      ]
+    },
+    {
+      "id": "admin-area",
+      "label": "行政区画（面）",
+      "description": "市区町村などの行政区域の塗り。陸地の下地としても働く。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "行政区画"
+      ],
+      "layerTypes": [
+        "fill"
+      ],
+      "sourceLayers": [
+        "AdmArea"
+      ]
+    },
+    {
+      "id": "admin-boundary",
+      "label": "行政界線（都道府県・市区町村界）",
+      "description": "都道府県界、市区町村界、地方界などの境界線。行政のまとまりを示すが地形とは無関係。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "行政区画界線25000所属界（所属を明示する境界線）",
+        "行政区画界線25000市区町村界",
+        "行政区画界線25000都府県界及び北海道総合振興局・振興局界",
+        "行政区画界線地方界",
+        "行政区画界線国の所属界"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "AdmBdry"
+      ]
+    },
+    {
+      "id": "contour",
+      "label": "等高線・等深線",
+      "description": "標高および水深を示す等値線とその数値注記。地形の起伏を読むための情報で、線の本数が非常に多い。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "等高線",
+        "等高線数値部",
+        "等深線",
+        "等深線数値部"
+      ],
+      "layerTypes": [
+        "line",
+        "symbol"
+      ],
+      "sourceLayers": [
+        "Cntr",
+        "Isbt"
+      ]
+    },
+    {
+      "id": "terrain",
+      "label": "地形表記（崖・岩・砂礫地など）",
+      "description": "崖、岩、雨裂、砂礫地など自然地形の面と線による表現。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "地形表記面",
+        "地形表記線"
+      ],
+      "layerTypes": [
+        "fill",
+        "line"
+      ],
+      "sourceLayers": [
+        "TpgphArea",
+        "TpgphLine"
+      ]
+    },
+    {
+      "id": "structure",
+      "label": "構造物（擁壁・タンクなど）",
+      "description": "擁壁、タンク、高塔など建築物以外の人工構造物。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "構造物面",
+        "構造物面の外周線",
+        "構造物線"
+      ],
+      "layerTypes": [
+        "fill",
+        "line"
+      ],
+      "sourceLayers": [
+        "StrctArea",
+        "StrctLine"
+      ]
+    },
+    {
+      "id": "powerline",
+      "label": "送電線",
+      "description": "高圧送電線の経路。電力インフラを表す。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "送電線",
+        "送電線破線"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "PwrTrnsmL"
+      ]
+    },
+    {
+      "id": "special-area",
+      "label": "特定地区界",
+      "description": "国立公園や自然環境保全地域などの特定地区の境界。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "特定地区界"
+      ],
+      "layerTypes": [
+        "line"
+      ],
+      "sourceLayers": [
+        "SpcfArea"
+      ]
+    },
+    {
+      "id": "annotation",
+      "label": "注記（地名・施設名などの文字）",
+      "description": "地名、駅名、施設名、道路番号などの文字ラベルとシンボル。これを消すと場所の同定が難しくなる。",
+      "alwaysVisible": false,
+      "layerIds": [
+        "注記シンボル付き重なり",
+        "注記道路番号",
+        "注記シンボル付きソート順100以上",
+        "注記シンボルなし縦ソート順100以上",
+        "注記シンボルなし横ソート順100以上",
+        "注記角度付き線",
+        "注記シンボル付きソート順100未満",
+        "注記シンボルなし縦ソート順100未満",
+        "注記シンボルなし横ソート順100未満"
+      ],
+      "layerTypes": [
+        "symbol"
+      ],
+      "sourceLayers": [
+        "Anno"
+      ]
+    }
+  ]
+}

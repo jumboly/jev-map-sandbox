@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音声でレイヤー重要度分類 — jev-map-sandbox</title>
+    <meta
+      name="description"
+      content="ブラウザの音声入力で出した指示を Jev に渡し、地理院地図Vector のレイヤーを重要度で段階的に出し分ける実験"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <main id="map" aria-label="地図"></main>
+
+      <aside class="panel">
+        <header class="panel-head">
+          <a class="back" href="../../">← 実験一覧</a>
+          <h1>音声 → Jev → レイヤー重要度</h1>
+          <p class="hint">
+            発話を Jev の <code>score</code> で 23 グループ分まとめて採点し、地理院地図Vector の
+            123 レイヤーを段階的に出し分けます。
+          </p>
+        </header>
+
+        <section class="step">
+          <h2><span class="num">1</span> 接続</h2>
+          <label class="field">
+            <span>経路</span>
+            <select id="transport">
+              <option value="vercel-gateway">Vercel AI Gateway（推奨・CORS 可）</option>
+              <option value="typesafe-direct">TypeSafe 直 API（要オリジン許可）</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>API キー</span>
+            <input id="api-key" type="password" placeholder="vck_… / sk_…" autocomplete="off" spellcheck="false" />
+          </label>
+          <label class="check">
+            <input id="remember" type="checkbox" />
+            このブラウザに記憶する（localStorage）
+          </label>
+          <p class="hint" id="transport-hint"></p>
+        </section>
+
+        <section class="step">
+          <h2><span class="num">2</span> 指示</h2>
+          <div class="utterance-row">
+            <textarea id="utterance" rows="2" placeholder="例: 鉄道を強調表示して"></textarea>
+            <button id="mic" type="button" title="音声入力" aria-label="音声入力">🎙</button>
+          </div>
+          <p class="hint" id="interim"></p>
+          <div class="chips" id="examples"></div>
+          <div class="actions">
+            <button id="run" type="button" class="primary">判定して地図に反映</button>
+            <button id="reset" type="button">元に戻す</button>
+          </div>
+          <label class="check">
+            <input id="auto-run" type="checkbox" checked />
+            音声が確定したら自動で判定する
+          </label>
+        </section>
+
+        <section class="step">
+          <h2><span class="num">3</span> 判定結果</h2>
+          <p class="status" id="status">API キーを入力し、指示を話すか入力してください。</p>
+          <dl class="metrics" id="metrics" hidden>
+            <div><dt>レイテンシ</dt><dd id="m-latency">—</dd></div>
+            <div><dt>入力トークン</dt><dd id="m-tokens">—</dd></div>
+            <div><dt>推定コスト</dt><dd id="m-cost">—</dd></div>
+          </dl>
+          <div id="verdicts" class="verdicts"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
