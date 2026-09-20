@@ -6,7 +6,7 @@ import { judgeableGroups, loadCatalog, type LayerCatalog } from './catalog'
 import { createMap, readView } from './map'
 import { LayerStyler } from './apply'
 import {
-  MAX_IMPORTANCE,
+  MAX_LEVEL,
   TIER_LABELS,
   judgeLayers,
   toTier,
@@ -150,11 +150,11 @@ function verdictRow(verdict: GroupVerdict): HTMLElement {
   const bar = document.createElement('div')
   bar.className = 'bar'
   const fill = document.createElement('i')
-  fill.style.width = `${(verdict.score / MAX_IMPORTANCE) * 100}%`
+  fill.style.width = `${(verdict.score / MAX_LEVEL) * 100}%`
   bar.append(fill)
 
   const scoreText = document.createElement('span')
-  scoreText.textContent = `${verdict.score.toFixed(2)} / ${MAX_IMPORTANCE}`
+  scoreText.textContent = `${verdict.score.toFixed(2)} / ${MAX_LEVEL}`
 
   const confidence = document.createElement('span')
   const pct = Math.round(verdict.confidence * 100)
